@@ -33,7 +33,7 @@ export class TemaService {
   }
 
   deleteTema(id: number) {
-    return this.http.delete(`https://apiblogapplication.herokuapp.com/tema/${id}`, this.token)
+    return this.http.delete(`https://apiblogapplication.herokuapp.com/tema${id}`, this.token)
   }
 
 
