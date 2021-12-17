@@ -31,7 +31,7 @@ export class EntrarComponent implements OnInit {
       environment.foto = this.userLogin.foto
       environment.id = this.userLogin.id
 
-     //console.log(environment.token)
+      //console.log(environment.token)
       //console.log(environment.nome)
       //console.log(environment.foto)
       //console.log(environment.id)
@@ -40,8 +40,8 @@ export class EntrarComponent implements OnInit {
 
       this.router.navigate(['/inicio'])
     }, erro =>{
-      if(erro.status == 500){
-        alert('Usuário ou senha estão incorretos!')
+      if(erro.status == 400){
+        alert('Não é possível editar, pois o Tema contém publicações ligadas a ele!')
       }
     })
   }
